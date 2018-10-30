@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <%- include('header_partial') %>
+  <h1>Hi, everyone</h1>
+  <h2>Current cool thing is: <%= coolThing %></h2>
+  <form action="/" method='POST'>
+    <input type="text" name='coolThing' placeholder='Next Cool Thing'/><br/>
+    <button type="submit">Dope.</button>
+  </form>
+
+  <h3>Previous cool things:</h3>
+  <ul>
+  <% previousCoolThings.forEach((previousCoolThing) => { %>
+    <li><%= previousCoolThing %></li>
+  <% }); %>
+  </ul>
+</body>
+</html>
